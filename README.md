@@ -1,6 +1,6 @@
 # cse210-ww-student-template
 
-Paulo Fagundes, estou pronto pra começar a aprender C#
-This is the starter code for students in the worldwide content version of CSE 210.
+Seja bem vindo a minha pagina inicial dos projetos em C#.
+Meu nome é Paulo Fagundes.
 
-This repository contains the starter code for many different projects. They are arranged folders by week. There is also an an empty sandbox project that can be used to play around with any concept you would like.
+Aqui você encontrará alguns estudos, testes e atividades que tenho desenvolvido.
