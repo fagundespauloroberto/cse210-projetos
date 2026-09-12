@@ -14,6 +14,7 @@ public class GeradorDePerguntas
         _perguntas.Add("Qual foi uma emoção forte que sentiu hoje?");
         _perguntas.Add("Se pudesse repetir algo que fez hoje, o que seria?");
         _perguntas.Add("Você conseguiu de alguma forma se aproximar do Pai Celestial hoje?");
+        _perguntas.Add("Você conseguiu ajudar alguém hoje?");
     }
 
     public string ObterPerguntaAleatoria()

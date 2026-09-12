@@ -51,22 +51,22 @@ public class Diario
         //limpa registros em memória para carregar do arquivo
         _registros.Clear();
 
-        // Leitura das linhas do arquivo de uma só vez
+        //leitura das linhas do arquivo de uma só vez
         string[] linhas = File.ReadAllLines(arquivo);
 
         foreach (string linha in linhas)
         {
-            // Separa a linha em partes onde houver o caractere '~'
+            // Separa a linha em partes onde houver o caractere ';'
             string[] partes = linha.Split(';');
 
-            // Garante que a linha possui exatamente os 3 campos (Data, Pergunta, Resposta)
+            // valida na linha se possui exatamente os 3 campos (Data, Pergunta, Resposta)
             if (partes.Length == 3)
             {
                 string data = partes[0];
                 string pergunta = partes[1];
                 string resposta = partes[2];
 
-                // Cria o objeto Registro e adiciona à lista
+                //objeto Registro e adiciona à lista
                 Registro registro = new Registro(data, pergunta, resposta);
                 _registros.Add(registro);
             }
