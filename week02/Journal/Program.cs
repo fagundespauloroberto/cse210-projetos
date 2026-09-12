@@ -20,6 +20,7 @@ class Program
             Console.WriteLine("3. Salvar em arquivo(informe o nome do arquivo seguido de .txt)");
             Console.WriteLine("4. Carregar de arquivo (informe o nome do arquivo seguido de .txt)");
             Console.WriteLine("0. Sair");
+            Console.WriteLine("OBS.: Se deseja manter os registro em seu arquivo, nunca grave sem carregar o arquivo antes.");
             Console.Write("Escolha uma opção: ");
 
             string opcao = Console.ReadLine();
