@@ -1,7 +1,7 @@
 using System;
 
 class Program
-{18
+{
    static void Main(string[] args)
     {
         Console.WriteLine("Olá, seja bem vindo ao sistema.");
