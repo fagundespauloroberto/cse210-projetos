@@ -14,12 +14,12 @@ class Program
 
         while (executando)
         {
-            Console.WriteLine("*** DIÁRIO **");
+            Console.WriteLine("** MEU DIÁRIO **");
             Console.WriteLine("1. Escrever novo registro");
             Console.WriteLine("2. Exibir todos os registros");
-            Console.WriteLine("3. Salvar em arquivo (Não implementado)");
-            Console.WriteLine("4. Carregar de arquivo (Não Implementado)");
-            Console.WriteLine("5. Sair");
+            Console.WriteLine("3. Salvar em arquivo(informe o nome do arquivo seguido de .txt)");
+            Console.WriteLine("4. Carregar de arquivo (informe o nome do arquivo seguido de .txt)");
+            Console.WriteLine("0. Sair");
             Console.Write("Escolha uma opção: ");
 
             string opcao = Console.ReadLine();
@@ -51,14 +51,18 @@ class Program
                     break;
                 
                 case "3":
-                    Console.WriteLine("Funcionalidade de salvar não implementada.\n");
+                    Console.Write("Por favor, informe o nome do arquivo para salvar (ex: diario.txt): ");
+                    string nomeArquivoSalvar = Console.ReadLine();
+                    meuDiario.SalvarNoArquivo(nomeArquivoSalvar);
                     break;
 
                 case "4":
-                    Console.WriteLine("Funcionalidade de carregar não implementada.\n");
+                    Console.Write("Por favor, informe o nome do arquivo para carregar (ex: diario.txt): ");
+                    string nomeArquivoCarregar = Console.ReadLine();
+                    meuDiario.CarregarDoArquivo(nomeArquivoCarregar);
                     break;
 
-                case "5":
+                case "0":
                     executando = false;
                     Console.WriteLine("Encerrando o Diário.!");
                     break;

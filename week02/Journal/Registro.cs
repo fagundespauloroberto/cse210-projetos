@@ -13,7 +13,22 @@ public class Registro
         _textoResposta = textoResposta;
     }
 
-    // Método para exibir
+    // metodos necessários para a leitura dos dados quando privados...
+    public string GetData()
+    {
+        return _data;
+    }
+
+    public string GetPergunta()
+    {
+        return _textoPergunta;
+    }
+
+    public string GetResposta()
+    {
+        return _textoResposta;
+    }
+
     public void Exibir()
     {
         Console.WriteLine($"Data: {_data} - Pergunta: {_textoPergunta}");
