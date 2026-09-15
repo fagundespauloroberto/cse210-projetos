@@ -1,7 +1,9 @@
 using System;
 
-//adicionais
-//ajustes de menu e separação por ponto e virgula
+// adicionais
+// ajustes de menu
+// separação por ponto e virgula
+// 
 
 class Program
 {
