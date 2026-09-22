@@ -1,5 +1,11 @@
 using System;
 
+//Além dos requisitos...
+//Salvar as escrituras em um arquivo.
+//Carregar apartir de um arquivo.
+//Apresentar lista de Escrituras salvas.
+//controle de erros para não permitir que o usuário grave string em campo de inteiro.
+
 class Program
 {
     static void Main(string[] args)
