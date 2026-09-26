@@ -1,0 +1,51 @@
+@startuml DiagramaDeClasses_ProductOrdering
+
+skinparam classAttributeIconSize 0
+
+class Pedido {
+    _produtos : List
+    _cliente : Cliente
+    Pedido(cliente : Cliente)
+    AdicionarProduto(produto : Produto) : void
+    CalcularCustoTotal() : decimal
+    ObterEtiquetaEmbalagem() : string
+    ObterEtiquetaEnvio() : string
+}
+
+class Produto {
+    _nome : string
+    _idProduto : string
+    _preco : decimal
+    _quantidade : int
+    Produto(nome : string, idProduto : string, preco : decimal, quantidade : int)
+    CalcularCustoTotal() : decimal
+    ObterNome() : string
+    ObterIdProduto() : string
+}
+
+class Cliente {
+    _nome : string
+    _endereco : Endereco
+    Cliente(nome : string, endereco : Endereco)
+    MoraNosEUA() : bool
+    ObterNome() : string
+    ObterEndereco() : Endereco
+}
+
+class Endereco {
+    _rua : string
+    _cidade : string
+    _estado : string
+    _pais : string
+    Endereco(rua : string, cidade : string, estado : string, pais : string)
+    EhEUA() : bool
+    ObterEnderecoFormatado() : string
+}
+
+' Relacionamentos
+Pedido "1" *-- "0..*" Produto : contém
+Pedido "1" *-- "1" Cliente : pertence a
+Cliente "1" *-- "1" Endereco : possui
+
+@endstyle
+@enduml
