@@ -1,0 +1,33 @@
+@startuml
+
+class Program {
+    + {static} Main(args: string[]) : void
+}
+
+class Video {
+    _titulo: string
+    _autor: string
+    _duracao: int
+    _comentarios : List
+    Video(titulo : string, autor : string, duracaoSegundos : int)
+    AdicionarComentario(autor : string, texto : string) : void  
+    ObterQuantidadeComentarios() : int                          
+    ObterTitulo() : string                                      
+    ObterAutor() : string                                       
+    ObterDuracao() : int                                        
+    ObterComentarios() : List
+}
+
+class Comentario {
+    _nomeAutor: string
+    _texto: string
+    Comentario(nomeAutor : string, texto : string)              
+    ObterNomeAutor() : string                                   
+    ObterTexto() : string
+}
+
+' Relações
+Program ..> Video : instância / utiliza
+Video "1" *-- "0..*" Comentario : contém
+
+@enduml
