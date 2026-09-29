@@ -15,6 +15,6 @@ class Program
 
         TarefaDeRedacao t3 = new TarefaDeRedacao("Mary Waters", "História Européia", "As Causas da Segunda Guerra Mundial");
         Console.WriteLine(t3.ObterResumo());
-        Console.WriteLine(t3.ObterInformacaoDaRedacao());
+        Console.WriteLine(t3.ObterInformacoesDaRedacao());
     }
 }
