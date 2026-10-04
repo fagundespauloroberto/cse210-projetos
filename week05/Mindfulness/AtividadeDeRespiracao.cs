@@ -2,10 +2,10 @@ using System;
 
 namespace Mindfulness
 {
-    // A sintaxe : Atividade define que esta classe herda de Atividade
+    //sintaxe : *Atividade* define que esta classe herda de Atividade
     public class ActividadeDeRespiracao : Atividade
     {
-        // Construtor passa o Nome e a Descrição padrão para a classe pai (base)
+        //construtor passa o Nome e a Descrição padrão para a classe pai (base)
         public ActividadeDeRespiracao() 
             : base("Atividade de Respiração", 
                    "Esta atividade ajudará você a relaxar, inspirando e expirando lentamente. Limpe sua mente e concentre-se na sua respiração.")
@@ -15,12 +15,12 @@ namespace Mindfulness
         // Método principal de execução da atividade
         public void Executar()
         {
-            // 1. Chama a mensagem inicial da classe pai (pede o tempo e aguarda)
+            //chama a mensagem inicial da classe pai (pede o tempo e aguarda)
             ExibirMensagemInicial();
 
             int tempoRestante = ObterDuracao();
 
-            // 2. Loop de respiração enquanto houver tempo restante
+            //loop de respiração enquanto houver tempo restante
             while (tempoRestante > 0)
             {
                 Console.Write("\nInspire...");
@@ -34,7 +34,7 @@ namespace Mindfulness
                 tempoRestante -= 6;
             }
 
-            // 3. Chama a mensagem final padrão da classe pai
+            //mensagem final padrão da classe pai
             ExibirMensagemFinal();
         }
     }

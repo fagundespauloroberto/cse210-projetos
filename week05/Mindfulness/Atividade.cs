@@ -18,7 +18,7 @@ namespace Mindfulness
             _duracao = 0;
         }
 
-        // Método para exibir a mensagem inicial padronizada
+        //mensagem inicial padronizada
         public void ExibirMensagemInicial()
         {
             Console.Clear();
@@ -35,7 +35,7 @@ namespace Mindfulness
 
             Console.Clear();
             Console.WriteLine("Prepare-se...");
-            ExibirProgresso(5); // Pausa com spinner por 5 segundos
+            ExibirProgresso(5); //pausa com spinner por 5 segundos
         }
 
         public void ExibirMensagemFinal()
@@ -69,7 +69,7 @@ namespace Mindfulness
             }
         }
 
-        // Animação de contagem regressiva numérica
+        //animação de contagem regressiva numérica
         public void ExibirContagemRegressiva(int segundos)
         {
             for (int i = segundos; i > 0; i--)
@@ -77,7 +77,7 @@ namespace Mindfulness
                 Console.Write(i);
                 Thread.Sleep(1000);
                 
-                // Trata o apagar de números com mais de um dígito
+                //trata o apagar de números com mais de um dígito
                 if (i >= 10)
                 {
                     Console.Write("\b\b  \b\b");

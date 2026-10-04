@@ -11,14 +11,14 @@ namespace Mindfulness
             while (executando)
             {
                 Console.Clear();
-                Console.WriteLine("==========================================");
-                Console.WriteLine("       OPÇÕES DO MENU DE MINDFULNESS      ");
-                Console.WriteLine("==========================================");
+                Console.WriteLine("************************************");
+                Console.WriteLine("    Programa de Introspecção        ");
+                Console.WriteLine("************************************");
                 Console.WriteLine("  1. Iniciar Atividade de Respiração");
-                Console.WriteLine("  2. Iniciar Atividade de Reflexão");
-                Console.WriteLine("  3. Iniciar Atividade de Listagem");
-                Console.WriteLine("  4. Sair");
-                Console.WriteLine("==========================================");
+                Console.WriteLine("  2. Iniciar Atividade de Reflexão  ");
+                Console.WriteLine("  3. Iniciar Atividade de Listagem  ");
+                Console.WriteLine("  4. Sair                           ");
+                Console.WriteLine("************************************");
                 Console.Write("Selecione uma escolha no menu (1-4): ");
 
                 string opcao = Console.ReadLine()?.Trim().ToLower();
@@ -42,7 +42,7 @@ namespace Mindfulness
 
                     case "4":
                     case "sair":
-                        Console.WriteLine("\nObrigado por usar o aplicativo de Mindfulness! Até breve.");
+                        Console.WriteLine("\nObrigado por usar o aplicativo de Introspecção!");
                         executando = false;
                         break;
 

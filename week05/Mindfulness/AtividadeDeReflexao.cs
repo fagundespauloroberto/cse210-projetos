@@ -5,19 +5,19 @@ namespace Mindfulness
 {
     public class AtividadeDeReflexao : Atividade
     {
-        // Listas privadas para armazenar os temas e as perguntas (Encapsulamento)
+
         private List<String> _reflexoes;
         private List<String> _perguntas;
         private Random _random;
 
-        // Construtor
+
         public AtividadeDeReflexao() 
             : base("Atividade de Reflexão", 
                    "Esta atividade ajudará você a refletir sobre momentos da sua vida em que você demonstrou força e resiliência. Isso ajudará você a reconhecer o poder que você tem e como pode usá-lo em outros aspectos da sua vida.")
         {
             _random = new Random();
 
-            // Inicialização da lista de temas de reflexão
+            //lista de temas de reflexão
             _reflexoes = new List<String>
             {
                 "Pense em uma ocasião em que você defendeu outra pessoa.",
@@ -26,7 +26,7 @@ namespace Mindfulness
                 "Pense em uma ocasião em que você fez algo verdadeiramente altruísta."
             };
 
-            // Inicialização da lista de perguntas
+            // lista de perguntas
             _perguntas = new List<String>
             {
                 "Por que essa experiência foi significativa para você?",
@@ -41,7 +41,6 @@ namespace Mindfulness
             };
         }
 
-        // Métodos auxiliares para buscar itens aleatórios
         public string ObterReflexoesAleatorias()
         {
             int index = _random.Next(_reflexoes.Count);
@@ -54,7 +53,6 @@ namespace Mindfulness
             return _perguntas[index];
         }
 
-        // Exibe o tema principal
         public void ExibirReflexoes()
         {
             Console.WriteLine("\nConsidere o seguinte prompt:\n");
@@ -67,26 +65,22 @@ namespace Mindfulness
             Console.Clear();
         }
 
-        // Método principal de execução da atividade
         public void Executar()
         {
-            // 1. Mensagem inicial padrão
             ExibirMensagemInicial();
 
-            // 2. Apresenta o prompt de reflexão
             ExibirReflexoes();
 
-            // 3. Exibe perguntas aleatórias com spinner enquanto houver tempo
+            // perguntas aleatórias com spinner enquanto houver tempo
             DateTime tempoFinal = DateTime.Now.AddSeconds(ObterDuracao());
 
             while (DateTime.Now < tempoFinal)
             {
                 string pergunta = ObterPerguntasAleatorias();
                 Console.Write($"\n> {pergunta} ");
-                ExibirProgresso(10); // Pausa por 10 segundos com o spinner
+                ExibirProgresso(10); //pausa por 10 segundos com o spinner
             }
 
-            // 4. Mensagem final padrão
             ExibirMensagemFinal();
         }
     }
