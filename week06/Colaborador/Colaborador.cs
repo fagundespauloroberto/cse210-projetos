@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace week06.Colaborador
 {
-    public class Colaborador
+    public abstract class Colaborador
     {
         private string _nome;
         private string _Id;
@@ -30,10 +30,12 @@ namespace week06.Colaborador
             _Id = Id;
         }
 
-        public virtual float Pagamento()
-        {
-            return -1;
-        }
+        //public virtual float Pagamento()
+        //{
+        //    return -1;
+        //}
+
+        public abstract float Pagamento();
         
     }
 }
