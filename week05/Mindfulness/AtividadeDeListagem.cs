@@ -1,3 +1,4 @@
+using System.Data;
 using System;
 using System.Collections.Generic;
 
@@ -35,7 +36,7 @@ namespace Mindfulness
         public List<String> ObterListaDoUsuario()
         {
             List<String> itens = new List<String>();
-            DateTime tempoFinal = DateTime.Now.AddSeconds(ObterDuracao());
+            DateTime tempoFinal = DateTime.Now.AddSeconds(_duracao); //DateTime.Now.AddSeconds(ObterDuracao());
 
             while (DateTime.Now < tempoFinal)
             {

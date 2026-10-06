@@ -1,0 +1,33 @@
+public abstract class Figura
+{
+    private string _cor;
+
+    public Figura(string cor)
+    {
+        _cor = cor;
+    }
+
+    public string ObterCor()
+    {
+        return _cor;
+    }
+
+    public void DefinirCor(string cor)
+    {
+        _cor = cor;
+    }
+
+    // Como não faz sentido definir um corpo padrão para este método na classe base,
+    // em vez de criar uma função "virtual" aqui, como:
+    //
+    // public virtual double GetArea()
+    // {
+    //     return 0;
+    // }
+    //
+    // Podemos, em vez disso, declarar a função como uma função "abstrata". Isso significa
+    // que ela é uma função virtual vazia que deve ser implementada ou "preenchida" por
+    // qualquer classe que herde de Forma. Então, qualquer classe que tenha um método abstrato
+    // também deve ser declarada como abstrata.
+    public abstract double ObterArea();
+}

@@ -18,7 +18,7 @@ namespace Mindfulness
             //chama a mensagem inicial da classe pai (pede o tempo e aguarda)
             ExibirMensagemInicial();
 
-            int tempoRestante = ObterDuracao();
+            int tempoRestante = _duracao; //ObterDuracao();
 
             //loop de respiração enquanto houver tempo restante
             while (tempoRestante > 0)
