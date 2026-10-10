@@ -1,9 +1,13 @@
 using System;
 
-class Program
+namespace QuestDeMetas
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello World! This is the EternalQuest Project.");
+        static void Main(string[] args)
+        {
+            GerenciadorDeMetas gerenciador = new GerenciadorDeMetas();
+            gerenciador.Iniciar();
+        }
     }
 }
