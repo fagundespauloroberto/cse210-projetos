@@ -61,6 +61,7 @@ namespace QuestDeMetas
                         break;
                     default:
                         Console.WriteLine("Opção inválida! Tente novamente.\n");
+                        System.Threading.Thread.Sleep(1500);
                         break;
                 }
             }
@@ -139,6 +140,7 @@ namespace QuestDeMetas
                     break;
                 default:
                     Console.WriteLine("Tipo de meta inválido.");
+                    System.Threading.Thread.Sleep(1500);
                     break;
             }
         }
@@ -172,7 +174,7 @@ namespace QuestDeMetas
             else
             {
                 Console.WriteLine("Opção de meta inválida.");
-                System.Threading.Thread.Sleep(3500); // Aguarda 1.5 segundos
+                System.Threading.Thread.Sleep(3500); //aguarda 3.5 segundos
             }
         }
 
@@ -193,6 +195,7 @@ namespace QuestDeMetas
             }
 
             Console.WriteLine("Metas salvas com sucesso!");
+            System.Threading.Thread.Sleep(3500);
         }
 
         // Lê e reconstrói as instâncias de metas a partir de um arquivo texto
@@ -204,6 +207,7 @@ namespace QuestDeMetas
             if (!File.Exists(nomeArquivo))
             {
                 Console.WriteLine("Arquivo não encontrado.");
+                System.Threading.Thread.Sleep(1500);
                 return;
             }
 
@@ -247,6 +251,7 @@ namespace QuestDeMetas
             }
 
             Console.WriteLine("Metas carregadas com sucesso!");
+            System.Threading.Thread.Sleep(3500);
         }
     }
 }
