@@ -89,6 +89,7 @@ namespace QuestDeMetas
             if (_metas.Count == 0)
             {
                 Console.WriteLine("  (Nenhuma meta cadastrada ainda)");
+                System.Threading.Thread.Sleep(2000); 
                 return;
             }
 
@@ -96,6 +97,7 @@ namespace QuestDeMetas
             {
                 Console.WriteLine($"  {i + 1}. {_metas[i].ObterDetalhesEmTexto()}");
             }
+            System.Threading.Thread.Sleep(2000);
         }
 
         // Menu para escolher qual tipo de meta instanciar
@@ -163,10 +165,14 @@ namespace QuestDeMetas
 
                 Console.WriteLine($"Parabéns! Você ganhou {pontosGanhos} pontos!");
                 Console.WriteLine($"Agora você tem {_pontos} pontos.");
+                
+                // Definição do tempo para o usuário ler a mensagem...
+                System.Threading.Thread.Sleep(4000);
             }
             else
             {
                 Console.WriteLine("Opção de meta inválida.");
+                System.Threading.Thread.Sleep(3500); // Aguarda 1.5 segundos
             }
         }
 
